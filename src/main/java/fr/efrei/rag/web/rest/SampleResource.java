@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.efrei.rag.domain.dto.DocumentDTO;
+import fr.efrei.rag.domain.dto.ValueDTO;
 
 @RestController
 public class SampleResource {
@@ -15,8 +15,8 @@ public class SampleResource {
         return "Hello " + value + "!";
     }
     @GetMapping("/samples/dto/{value}")
-    public  ResponseEntity<DocumentDTO> helloJSON(@PathVariable(value = "value", required = false) final String value){
-        var result = new DocumentDTO("Hello " + value + "!");
+    public  ResponseEntity<ValueDTO> helloJSON(@PathVariable(value = "value", required = false) final String value){
+        var result = new ValueDTO("Hello " + value + "!");
         return ResponseEntity.ok().body(result);
     }
 }
