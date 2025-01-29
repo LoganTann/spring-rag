@@ -23,7 +23,7 @@ spec:
           image: docker.io/logantann/spring-rag:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           resources: {}
 status: {}
 
@@ -40,7 +40,7 @@ spec:
   ports:
     - port: 80
       protocol: TCP
-      targetPort: 8080
+      targetPort: 8081
       name: http
   selector:
     app: spring-rag
