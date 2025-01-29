@@ -118,4 +118,9 @@ public class DocumentService {
         Response<AiMessage> response = chatLanguageModel.generate(chatMessages);
         return response.content().text();
     }
+
+    public List<Document> findAll() {
+        log.debug("Request to find all Documents");
+        return documentRepository.findAll();
+    }
 }
