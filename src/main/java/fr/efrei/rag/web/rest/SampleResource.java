@@ -16,7 +16,7 @@ public class SampleResource {
     }
     @GetMapping("/samples/dto/{value}")
     public  ResponseEntity<DocumentDTO> helloJSON(@PathVariable(value = "value", required = false) final String value){
-        var result = new DocumentDTO(value);
+        var result = new DocumentDTO("Hello " + value + "!");
         return ResponseEntity.ok().body(result);
     }
 }
