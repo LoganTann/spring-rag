@@ -33,7 +33,7 @@ public class SampleResourceIT {
     }
 
     @Test
-    public void sampleJsomTest() throws Exception {
+    public void sampleJsonTest() throws Exception {
         String value = "EFREI";
         restProjectMockMvc
                 .perform(get(ENTITY_API_URL + "/dto/"+value))
